@@ -15,7 +15,7 @@ Note: I've tried to reproduce this with a vanilla js setup, but then I could not
 ### Reproduction
 
 - In `./tests/Component.test.js` we import the component `./Component.vue`
-- In the test we mock two imports: a normal import and an import that imports an aliassed import
+- In the test we mock two imports: a normal import and an import that imports an aliased import
 
 First start the vitest in watch mode
 
@@ -29,7 +29,7 @@ Now open `./importAlias.js` and uncomment the comment on top of the file.
 
 ### Expected
 
-Vitest will throw because it executed the aliassed script, while we expected the import to be moc ked:
+Vitest will throw because it executed the aliased script, while we expected the import to be mocked:
 
 ```sh
  FAIL  tests/Component.test.js > mock repro > mocks a non-aliased Function
